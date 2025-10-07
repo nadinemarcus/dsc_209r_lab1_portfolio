@@ -5,5 +5,20 @@ body {
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin-inline: max(1em, (100% - 100ch) / 2);
-
+  padding: 0.5;
 }
+
+
+nav {
+  display: flex;
+  border-bottom: 1px solid oklch(80% 3% 200);
+  margin-bottom: 1em;
+}
+
+nav ul, nav li {
+  display: contents;
+}
+
+<a> class="current" 
+	flex: 1
+</a> 
