@@ -1,3 +1,7 @@
+html {
+  --color-accent: oklch(72.736% 0.05815 260.231);
+  accent-color: var(--color-accent);
+}
 body {
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
@@ -19,11 +23,93 @@ nav ul, nav li {
   display: contents;
 }
 
-.a{
-	class="current";
+nav a{
 	flex: 1;
 	text-decoration:none;
 	color: inherit;
 	text-align: center;
 	padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.1em;
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+form {
+  font: inherit;  
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 100%;
+  gap: 1em
+}
+
+label {
+  display: contents;
+  grid-template-columns: subgrid;
+  margin-block:1em 2em;
+}
+
+button {
+  grid-column: 1 / -1;
+}
+
+
+.projects {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+  }
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+}
+.projects h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 400%;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.resume {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.resume h2{
+    font-size: 150%;
+    margin-block: 1em;
+}
+
+.resume iframe {
+  display: block;
+  width: 100%;
+  height: 80vh;
+  border: 2px solid oklch(80% 3% 200);
+  border-radius: 8px;
+  margin-block: 1.5em;
+}
+
+.p {
+  font_size: 200%;
+  font: inherit
 }

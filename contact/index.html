@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projects</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
     <nav>
-        <a href="https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/">Home</a> |
-        <a href="https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/projects/">Projects</a> |
-        <a href="https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/resume/" target="_blank">Resume</a> |
-        <a href="https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/contact/">Contact</a> |
+        <a href="/index.html">Home</a> |
+        <a href="/projects/index.html">Projects</a> |
+        <a href="/resume/index.html" target="_blank">Resume</a> |
+        <a href="/contact/index.html" class="current">Contact</a> |
         <a href="https://github.com/nadinemarcus" target="_blank">GitHub</a>
     </nav>
-    <h1>Contact</h1>]
+    <h1>Contact</h1>
 <form action="mailto:nadinemarcus2002@gmail.com" method="POST" enctype="text/plain">
   <label>
     Email:    
     <input type="email" name="email" required>
   </label>
-  <br><br>
 
   <label>
     Subject:    
-    <input name="subject" required>
+    <input type="text" name="subject" required>
   </label>
-  <br><br>
 
   <label>
     Message:    
-    <textarea name="body" rows="5" cols="30" ></textarea>
+    <textarea name="body" rows="5"></textarea>
   </label>
-  <br><br>
 
-  <button>Submit</button>
+  <button type="submit">Send</button>
 </form>
 
 </body>
