@@ -8,7 +8,7 @@
     {
         "title": "SDCTA Homelessness Dataset",
         "year": "2023",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/images/sdcta.jpg",
         "description": "Working as a data science intern at San Diego County Taxpayers' Association, I spearheaded a the homelessness dataset project where we we finetuned a token reader to read documents for philanthropies that taxpayers' dollars go to. Also co-created an XML parser."
     },
     {
@@ -24,10 +24,10 @@
         "description": "Qui quas recusandae autem, delectus, porro explicabo expedita modi quam doloremque libero est quis adipisci iste iure numquam. Facilis provident sapiente excepturi ipsum nesciunt aut expedita tempore eligendi similique voluptates?"
     },
     {
-        "title": "Quidem quisquam vel autem!",
+        "title": "Premium Reporting Database",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Fuga doloribus deserunt modi quia repellendus adipisci quas at reprehenderit atque quis voluptatem inventore, nobis temporibus nostrum aliquid omnis cupiditate error ullam illum porro sit est maxime! Sapiente, debitis tempora?"
+        "image": "https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/images/palomar.jpg",
+        "description": "Constructing a premium reporting database in Snowflake from 20+ MGAs' data."
     },
     {
         "title": "Necessitatibus aspernatur aliquam modi?",
