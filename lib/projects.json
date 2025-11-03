@@ -2,19 +2,19 @@
     {
         "title": "Blackjack Card Counting GUI Simulator",
         "year": "2024",
-        "image": "https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/images/blackjack_gui.jpg",
+        "image": "https://nadinemarcus.github.io/DSC209R_portfolio/images/blackjack_gui.jpg",
         "description": "A GUI simulator that both visualizes and simulates a round of blackjack while also counting cards and uses Monte Carlo to assess the best card counting strategy for blackjack."
     },
     {
         "title": "SDCTA Homelessness Dataset",
         "year": "2023",
-        "image": "https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/images/sdcta.jpg",
+        "image": "https://nadinemarcus.github.io/DSC209R_portfolio/images/sdcta.jpg",
         "description": "Working as a data science intern at San Diego County Taxpayers' Association, I spearheaded a the homelessness dataset project where we we finetuned a token reader to read documents for philanthropies that taxpayers' dollars go to. Also co-created an XML parser."
     },
     {
         "title": "Power Outage Analysis",
         "year": "2024",
-        "image": "https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/images/power_outage.jpg",
+        "image": "https://nadinemarcus.github.io/DSC209R_portfolio/images/power_outage.jpg",
         "description": "An analysis using power outage data to assess different potential causes and trends in power outage data."
     },
     {
@@ -26,7 +26,7 @@
     {
         "title": "Premium Reporting Database",
         "year": "2025",
-        "image": "https://nadinemarcus.github.io/dsc_209r_lab1_portfolio/images/palomar.jpg",
+        "image": "https://nadinemarcus.github.io/DSC209R_portfolio/images/palomar.jpg",
         "description": "Constructing a premium reporting database in Snowflake from 20+ MGAs' data."
     },
     {

@@ -15,7 +15,7 @@ let pages = [
 const BASE_PATH =
   location.hostname === 'localhost' || location.hostname === '127.0.0.1'
     ? '/' // Local server
-    : '/dsc_209r_lab1_portfolio/'; // GitHub Pages repo name
+    : '/DSC209R_portfolio/'; // GitHub Pages repo name
 
 
 let nav = document.createElement('nav');
