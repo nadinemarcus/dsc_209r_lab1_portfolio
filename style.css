@@ -242,3 +242,132 @@ path {
 path {
   cursor: pointer;
 }
+
+/* Container for all stats */
+#stats {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+/* Style the dl as horizontal flex container */
+.stats {
+  content:"SUMMARY";
+  display: grid;
+  grid-template-rows: auto auto;  /* two rows: labels + values */
+  grid-auto-flow: column;          
+  justify-content: center;        
+  gap: 1.5rem;    
+  flex-wrap: wrap; 
+  background-color: #f9f9f9;
+  border: 2px solid oklch(80% 3% 200);
+  border-radius: 8px;
+  padding: 1rem 1rem;
+  font-size:large;
+  font-weight: bold;
+  color: #666666;
+  grid-row: 1;
+}
+
+/* dt on top row */
+.stats dt {
+  grid-row: 2;             
+  font-size: .9rem;
+  color: #888888;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* dd on second row */
+.stats dd {
+  grid-row: 3;               
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.gridlines {
+  font-weight: lighter;
+  color: #bdbdbd;
+}
+
+/* dl with info class: labels in first column, values in second */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr; /* first column for dt, second for dd */
+  gap: 0.5rem 1rem;                /* row gap / column gap */
+  margin: 0;                        /* remove default dl margin */
+  padding: 0;                       /* remove default padding */
+}
+
+dl.info dt {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #888888;       /* gray, less prominent */
+  text-transform: uppercase;
+  margin: 0;            
+}
+
+dl.info dd {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #222222;
+  margin: 0;      
+}
+
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-size: 0.85rem;
+  z-index: 1000;       
+}
+
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+dl.info {
+  /* ... other styles ... */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
