@@ -18,6 +18,13 @@
         "description": "An analysis using power outage data to assess different potential causes and trends in power outage data."
     },
     {
+        "title": "Bikewatching in Boston/Cambridge",
+        "year": "2025",
+        "image": "https://nadinemarcus.github.io/DSC209R_portfolio/images/bikewatching.jpg",
+        "description": "Using MapBox to see bikepaths in Boston/Cambridge area and track traffic overtime.",
+        "url": "https://nadinemarcus.github.io/bikewatching/"
+    },
+    {
         "title": "Dietary Explorations",
         "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
