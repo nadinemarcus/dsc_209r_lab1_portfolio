@@ -4,16 +4,32 @@ html {
   color-scheme: light dark;
 }
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
-  font: 100%/1.5 system-ui;
-  max-width: 100ch;
-  margin-inline: max(1em, (100% - 100ch) / 2);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;       /* smaller font */
+  line-height: 1.4;          /* slightly tighter */
+  color: #222;
+  max-width: 90ch;
+  margin-inline: auto;
   padding: 0.5em;
-  position:relative;
 }
 
+/* Headings */
+h1 {
+  font-size: 0.5rem;
+  line-height: 0.7;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
 
 nav {
   display: flex;
@@ -86,7 +102,7 @@ button {
 }
 
 h1 {
-  font-size: 400%;
+  font-size: 250%;
   line-height: 1.1;
   text-wrap: balance;
 }
@@ -256,7 +272,7 @@ path {
 .stats {
   content:"SUMMARY";
   display: grid;
-  grid-template-rows: auto auto;  /* two rows: labels + values */
+  grid-auto-rows: auto;  /* two rows: labels + values */
   grid-auto-flow: column;          
   justify-content: center;        
   gap: 1.5rem;    
@@ -266,15 +282,13 @@ path {
   border-radius: 8px;
   padding: 1rem 1rem;
   font-size:large;
-  font-weight: bold;
   color: #666666;
-  grid-row: 1;
 }
 
 /* dt on top row */
 .stats dt {
-  grid-row: 2;             
-  font-size: .9rem;
+  grid-row: 1;             
+  font-size: .8rem;
   color: #888888;
   font-weight: 600;
   text-align: center;
@@ -282,8 +296,8 @@ path {
 
 /* dd on second row */
 .stats dd {
-  grid-row: 3;               
-  font-size: 1.3rem;
+  grid-row: 2;               
+  font-size: 1rem;
   font-weight: 700;
   color: #000;
   text-align: center;
@@ -370,4 +384,176 @@ dl.info[hidden]:not(:hover, :focus-within) {
   stroke-opacity: 0.7;
   stroke-dasharray: 5 3;
   animation: marching-ants 2s linear infinite;
+}
+
+#commit-slider {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between label and slider */
+}
+
+#commit-slider label {
+  flex-shrink: 0; /* keep label size */
+}
+
+#commit-progress {
+  flex-grow: 1;       /* take remaining space */
+  height: 8px;        /* thicker slider track */
+  appearance: none;   /* remove default styling */
+  background: #ddd;   /* track color */
+  border-radius: 4px;
+}
+
+#commit-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: steelblue;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+#commit-progress::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: steelblue;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+#commit-time {
+  margin-left: auto; /* push time to the right */
+  font-size: 0.9em;
+  color: #555;
+}
+
+#any-time-label {
+  font-style: italic;
+  color: #888;
+  margin-left: 5px;
+}
+
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  dt {
+    grid-column: 1;
+  }
+
+  dd {
+    grid-column: 2;
+  }
+}
+
+#files > div dt code small {
+  display: block;
+  font-size: 0.7em;
+  opacity: 0.7;
+  margin-top: 0.1em;
+}
+
+dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: steelblue;
+  border-radius: 50%;
+}
+
+#files > div dt code small {
+  display: block;
+  font-size: 0.7em;
+  opacity: 0.7;
+  margin-top: 0.1em;
+}
+
+dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+
+.loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color, steelblue); /* fallback color */
+}
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+#scrolly-1 > * {
+  flex: 1;
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 50vh; /* important for sticky to work */
+}
+
+.step {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+/* Commit link styling */
+.step a {
+  color: steelblue;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.step a:hover {
+  text-decoration: underline;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5rem 1rem;
+  justify-content: center;
+}
+
+.stats dt,
+.stats dd {
+  grid-row: auto; /* remove forced grid-row */
+  text-align: center;
 }

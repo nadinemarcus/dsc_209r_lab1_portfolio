@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta</title>
     <script src="./main.js" type="module"></script>
-    <script src="../global.js" type="module"></script>
-    <link rel="stylesheet" href="../style.css"/>
-   
+    <link rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
     <h1>Meta</h1>
+
+    <!-- Time slider -->
+    <div id="commit-slider" style="display:flex; align-items: baseline;">
+        <label for="commit-progress" class="time-filter">Show commits until:</label>
+        <input type="range" id="commit-progress" min="0" max="100">
+        <time id="commit-time" style="display:block; margin-left: auto;"></time>
+        <em id="any-time-label" style="display:block; color:#888;">(any time)</em>
+    </div>
+
+    <!-- Summary stats -->
     <div id="stats"></div>
 
-    <h2>Commits by time of day</h2>
-    <div id="chart"></div>  
+    <div id="chart"></div>
 
+
+    <!-- Scrollytelling section -->
+    <div id="scrolly-1">
+        <!-- Left: narrative text -->
+        <div id="scatter-story"></div>
+
+        <!-- Right: scatter plot -->
+        <div id="scatter-plot">
+            <div id="chart"></div>
+        </div>
+    </div>
+
+    <!-- File unit visualization -->
+    <dl id="files">
+        <!-- D3 will populate <div><dt><code></code></dt><dd></dd></div> for each file -->
+    </dl>
+
+    <!-- Map section -->
+    <div id="map">
+        <svg></svg>
+    </div>
+
+    <!-- Commit tooltip -->
     <dl id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
-        <dd>
-            <a href="" id="commit-link" target="_blank"></a>
-        </dd>
+        <dd><a href="" id="commit-link" target="_blank"></a></dd>
 
         <dt>Date</dt>
         <dd id="commit-date"></dd>
 
         <dt>Time</dt>
-        <dd id="commit-time"></dd>
+        <dd id="commit-time-tooltip"></dd>
 
         <dt>Author</dt>
         <dd id="commit-author"></dd>
@@ -35,8 +64,7 @@
         <dt>Lines Edited</dt>
         <dd id="commit-lines"></dd>
     </dl>
-    <p id="selection-count">No commits selected</p>
-    <dl id="language-breakdown" class="stats"></dl>
-</body>
     
+</body>
+
 </html>
